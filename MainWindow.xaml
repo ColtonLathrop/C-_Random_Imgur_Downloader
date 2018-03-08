@@ -1,0 +1,34 @@
+﻿<Window x:Class="Random_Imgur_Downloader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Random_Imgur_Downloader"
+        xmlns:SystemGesture="http://schemas.microsoft.com/winfx/2009/xaml"
+        xmlns:Sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="RID v1.0.0" Height="174" Width="323" 
+        Topmost="False" WindowState="Normal" WindowStartupLocation="CenterScreen"
+        >
+    <Window.Resources>
+    </Window.Resources>
+    <Canvas Background="White" Margin="0,0,4.333,1">
+        <Button Canvas.Left="10"  Content="Test URL" Name="test_button"  Click="changeText_test" Canvas.Top="90"/>
+        <Button Canvas.Left="10"  Content="Start" Name="Start" Click="StartRun" Canvas.Top="10" RenderTransformOrigin="1.909,4.57" Width="67"/>
+        <TextBox Name="textBox1" Canvas.Left="10" Canvas.Bottom="10" Width="187" RenderTransformOrigin="0.5,0.46" Canvas.Top="115" />
+        <StackPanel Height="42" Width="121" RenderTransformOrigin="0.799,1.291" Canvas.Left="192" Canvas.Top="6">
+            <Label Content="Run Length:" Margin="0,0,0.333,0" />
+            <TextBox x:Name="runLength" />
+
+        </StackPanel>
+        <StackPanel RenderTransformOrigin="0.312,0.493" Canvas.Left="98" Canvas.Top="13">
+            <RadioButton Name="lengthSeven" Content="Length 7 URL" Canvas.Left="94" Canvas.Top="50"/>
+            <RadioButton Name="lengthSix" Content="Length 6 URL" Canvas.Left="94" Canvas.Top="30"/>
+            <RadioButton Name="lengthFive" Content="Length 5 URL" Canvas.Left="94" Canvas.Top="10" IsChecked="True"/>
+        </StackPanel>
+        <DockPanel Width="246" Canvas.Left="10" Canvas.Top="62">
+            <Button Margin="0" Padding="0" DockPanel.Dock="Right" Width="79" Click="BrowseFolder">Select Folder</Button>
+            <TextBox Height="Auto" HorizontalAlignment="Stretch" DockPanel.Dock="Right" Name="selectedDirectory" IsReadOnly="True"/>
+        </DockPanel>
+    </Canvas>
+</Window>
